@@ -44,8 +44,8 @@
                     <i class="flaticon-381-turn-off"></i>
                     <span class="nav-text">Logout</span>
                 </a>
-              </li>
+            </li>
 
-    </ul>
+        </ul>
     </div>
 </div>

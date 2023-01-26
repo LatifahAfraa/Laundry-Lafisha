@@ -3,24 +3,27 @@
 
 
 <!-- Mirrored from tixia.dexignzone.com/xhtml/page-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Jul 2021 10:26:31 GMT -->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Laundry Lafisha</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="https://png.pngtree.com/template/20210107/ourlarge/pngtree-natural-eco-electronic-logo-image_471899.jpg">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://1.bp.blogspot.com/-xZu9tFXeIbY/YQAiXMzCLlI/AAAAAAAABsg/-FKm_H-MruwmDeFTOGe4fwiMt8vmfkocwCLcBGAsYHQ/s640/logo%2Blaundry.png">
 
-	<link href="{{ asset('base/vendor/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('base/vendor/datatables/css/jquery.dataTables.min.css') }}" rel="stylesheet">
 
     {{-- daterangepicker --}}
     <link href="{{ asset('base/vendor/bootstrap-daterangepicker/daterangepicker.css') }}" rel="stylesheet">
-    <link href="{{ asset('base/vendor/bootstrap-select/dist/css/bootstrap-select.min.css')}}" rel="stylesheet">
-	<link href="{{ asset('base/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css')}}" rel="stylesheet">
-    <link href="{{ asset('base/css/style.css')}}" rel="stylesheet">
+    <link href="{{ asset('base/vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('base/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css') }}"
+        rel="stylesheet">
+    <link href="{{ asset('base/css/style.css') }}" rel="stylesheet">
 
     <!-- Summernote -->
-    <link href="{{ asset('base/vendor/summernote/summernote.css')}}" rel="stylesheet">
+    <link href="{{ asset('base/vendor/summernote/summernote.css') }}" rel="stylesheet">
 
     {{-- Leafleet JS --}}
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -40,6 +43,7 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
 </head>
+
 <body class="h-100">
     <div class="authincation h-100">
         <div class="container h-100">
@@ -95,7 +99,7 @@
                                                 <input id="name" type="text"
                                                     class="form-control @error('name') is-invalid @enderror"
                                                     name="name" value="{{ old('name') }}" required
-                                                    autocomplete="name" autofocus >
+                                                    autocomplete="name" autofocus>
 
                                                 @error('name')
                                                     <span class="invalid-feedback" role="alert">
@@ -168,48 +172,48 @@
     </div>
 
 
-     <!-- Required vendors -->
-     <script src="{{ asset('base/vendor/global/global.min.js')}}"></script>
-     <script src="{{ asset('base/vendor/bootstrap-select/dist/js/bootstrap-select.min.js')}}"></script>
+    <!-- Required vendors -->
+    <script src="{{ asset('base/vendor/global/global.min.js') }}"></script>
+    <script src="{{ asset('base/vendor/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
 
-     <script src="{{ asset('base/vendor/bootstrap-datetimepicker/js/moment.js')}}"></script>
-     <script src="{{ asset('base/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js')}}"></script>
+    <script src="{{ asset('base/vendor/bootstrap-datetimepicker/js/moment.js') }}"></script>
+    <script src="{{ asset('base/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js') }}"></script>
 
-     {{-- daterangepicker --}}
-     <script src="{{ asset('base/vendor/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
-     <script src="{{ asset('base/js/plugins-init/bs-daterange-picker-init.js') }}"></script>
+    {{-- daterangepicker --}}
+    <script src="{{ asset('base/vendor/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
+    <script src="{{ asset('base/js/plugins-init/bs-daterange-picker-init.js') }}"></script>
 
 
-     <!-- Apex Chart -->
-     <script src="{{ asset('base/vendor/apexchart/apexchart.js')}}"></script>
+    <!-- Apex Chart -->
+    <script src="{{ asset('base/vendor/apexchart/apexchart.js') }}"></script>
 
-     <!-- Chart ChartJS plugin files -->
-     <script src="{{ asset('base/vendor/chart.js/Chart.bundle.min.js')}}"></script>
-     <script src="{{ asset('base/js/plugins-init/chartjs-init.js')}}"></script>
+    <!-- Chart ChartJS plugin files -->
+    <script src="{{ asset('base/vendor/chart.js/Chart.bundle.min.js') }}"></script>
+    <script src="{{ asset('base/js/plugins-init/chartjs-init.js') }}"></script>
 
-     <!-- Datatable -->
-     <script src="{{ asset('base/vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
-     <script src="{{ asset('base/js/plugins-init/datatables.init.js')}}"></script>
+    <!-- Datatable -->
+    <script src="{{ asset('base/vendor/datatables/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('base/js/plugins-init/datatables.init.js') }}"></script>
 
-     <script src="{{ asset('base/js/custom.min.js')}}"></script>
-     <script src="{{ asset('base/js/deznav-init.js')}}"></script>
-     <script src="{{ asset('base/js/demo.js')}}"></script>
-     <script src="{{ asset('base/js/styleSwitcher.js')}}"></script>
+    <script src="{{ asset('base/js/custom.min.js') }}"></script>
+    <script src="{{ asset('base/js/deznav-init.js') }}"></script>
+    <script src="{{ asset('base/js/demo.js') }}"></script>
+    <script src="{{ asset('base/js/styleSwitcher.js') }}"></script>
 
-     {{-- My Js --}}
-     <script src="{{ asset('base/js/apps.js')}}"></script>
+    {{-- My Js --}}
+    <script src="{{ asset('base/js/apps.js') }}"></script>
 
-     {{-- Bootbox --}}
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.3/bootbox.min.js"
-     integrity="sha512-U3Q2T60uOxOgtAmm9VEtC3SKGt9ucRbvZ+U3ac/wtvNC+K21Id2dNHzRUC7Z4Rs6dzqgXKr+pCRxx5CyOsnUzg=="
-     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    {{-- Bootbox --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.3/bootbox.min.js"
+        integrity="sha512-U3Q2T60uOxOgtAmm9VEtC3SKGt9ucRbvZ+U3ac/wtvNC+K21Id2dNHzRUC7Z4Rs6dzqgXKr+pCRxx5CyOsnUzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-     <!-- Summernote -->
-     <script src="{{ asset('base/vendor/summernote/js/summernote.min.js')}}"></script>
-     <!-- Summernote init -->
-     <script src="{{ asset('base/js/plugins-init/summernote-init.js')}}"></script>
-     {{-- select2 --}}
-     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- Summernote -->
+    <script src="{{ asset('base/vendor/summernote/js/summernote.min.js') }}"></script>
+    <!-- Summernote init -->
+    <script src="{{ asset('base/js/plugins-init/summernote-init.js') }}"></script>
+    {{-- select2 --}}
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 
 

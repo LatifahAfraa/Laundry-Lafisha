@@ -38,7 +38,7 @@
         @yield('content')
         <div class="footer">
             <div class="copyright">
-                <p>Copyright © Developed by <a href="https://sukumaya.co.id/" target="_blank">Sukumaya</a> 2022</p>
+                <p>Copyright © Developed by <a href="" target="_blank">Latifah Afra</a> 2023</p>
             </div>
         </div>
     </div>
