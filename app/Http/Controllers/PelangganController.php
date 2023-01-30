@@ -14,7 +14,8 @@ class PelangganController extends Controller
      */
     public function index()
     {
-        //
+        $pelanggan = Pelanggan::all();
+        return view('content.pelanggan.index', compact('pelanggan'));
     }
 
     /**
