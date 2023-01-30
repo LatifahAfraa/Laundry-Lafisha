@@ -1,5 +1,5 @@
 @extends('base')
-@section('title', 'Laundry Lafisha - Home')
+@section('title')
 @section('content')
 
 <div class="col-xl-12 col-lg-12 col-sm-12 mt-2">

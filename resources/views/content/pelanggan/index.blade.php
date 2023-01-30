@@ -1,5 +1,5 @@
-@extends('master')
-@section('title', 'Laundry Lafisha - Pelanggan')
+@extends('base')
+@section('title')
 @section('content')
     <div class="card table-responsive">
         <div class="card-body">
@@ -10,26 +10,42 @@
                     </h2>
                 </center>
             </div>
-            <br>
+            <form action="">
+                <a href="{{ route('pelanggan.create') }}" class="btn btn-sm shadow btn-success">
+                    <i class="flaticon-381-plus"></i>
+                    Tambah Pelanggan</a>
+                </form>
 
             <br>
-            <table id="" class="example-display table-bordered mt-2">
-                <thead>
-                    <tr>
+
+            <table class="example display ">
+                <thead class="light">
+                    <tr class="text-center">
                         <th>No</th>
                         <th>Nama Pelanggan</th>
                         <th>No Hp</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     @php
                         $no = 1;
                     @endphp
-                        <tr>
-                            <td>{{ $no++ }}</td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                    @foreach ($pelanggan as $item)
+
+                    <tr>
+                        <td>{{ $no++ }}</td>
+                        <td>{{ $item->nama_pelanggan }}</td>
+                        <td>{{ $item->no_pelanggan }}</td>
+                        <td class="text-center">
+                            <div class="col">
+                                <a href="" class="btn btn-sm shadow btn-warning">
+                                    <i class="flaticon-381-edit"></i>
+                                    Edit</a>
+                            </div>
+                        </td>
+                    </tr>
+                    @endforeach
                 </tbody>
             </table>
             <br>

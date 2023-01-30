@@ -4,6 +4,7 @@ use App\Models\Pelanggan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PelangganController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,5 +24,5 @@ Auth::routes();
 Route::middleware(['auth'])->group(function(){
     Route::get('/', [HomeController::class, 'index'])->name('home');
 
-    Route::resource('pelanggan', Pelanggan::class);
+    Route::resource('pelanggan', PelangganController::class);
 });

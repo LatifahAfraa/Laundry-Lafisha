@@ -14,8 +14,9 @@ class PelangganController extends Controller
      */
     public function index()
     {
+        $data['title'] = 'List Pelanggan';
         $pelanggan = Pelanggan::all();
-        return view('content.pelanggan.index', compact('pelanggan'));
+        return view('content.pelanggan.index', compact('pelanggan'),  $data);
     }
 
     /**
@@ -25,7 +26,8 @@ class PelangganController extends Controller
      */
     public function create()
     {
-        //
+        $data['title'] = 'Tambah Pelanggan';
+        return view('content.pelanggan.create_pelanggan', $data);
     }
 
     /**
@@ -34,9 +36,20 @@ class PelangganController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Pelanggan $pelanggan)
     {
-        //
+        $request->validate([
+            'nama_pelanggan'=> 'required',
+            'no_pelanggan' => 'nullable'
+        ]);
+
+        $data = [
+            'nama_pelanggan' => $request->nama_pelanggan,
+            'no_pelanggan' => $request->no_pelanggan
+        ];
+
+        $pelanggan->insert($data);
+        return redirect()->route('pelanggan.index')->with('success', 'Data berhasil ditambahkan');
     }
 
     /**
