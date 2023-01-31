@@ -18,6 +18,12 @@
                     </a>
                 </li>
 
+                <li>
+                    <a href="{{ route('jenis.index') }}" class="ai-icon " aria-expanded="false">
+                        <i class="flaticon-381-list"></i>
+                        <span class="nav-text">Jenis Paket</span>
+                    </a>
+                </li>
 
 
                 <li>

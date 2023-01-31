@@ -14,7 +14,9 @@ class JenisController extends Controller
      */
     public function index()
     {
-        //
+        $data['title'] = 'List Jenis Paket Laundry Lafisha';
+        $jenis = Jenis::all();
+        return view('content.jenis.index', compact('jenis'), $data);
     }
 
     /**
@@ -24,7 +26,8 @@ class JenisController extends Controller
      */
     public function create()
     {
-        //
+        $data['title'] = 'Tambah Jenis Paket Laundry Lafisha';
+        return view('content.jenis.create_jenis', $data);
     }
 
     /**
@@ -33,9 +36,22 @@ class JenisController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Jenis $jenis)
     {
-        //
+        $request->validate([
+            'jenis_nama' => 'required',
+            'jenis_harga' => 'nullable',
+            'jenis_status' => 'required'
+        ]);
+
+        $data = [
+            'jenis_nama' => $request->jenis_nama,
+            'jenis_harga' => $request->jenis_harga,
+            'jenis_status' => $request->jenis_status,
+        ];
+
+        $jenis->insert($data);
+        return redirect()->route('jenis.index')->with('success', 'Data Berhasil Di Tambahkan');
     }
 
     /**
