@@ -6,7 +6,7 @@
             <div class="mb-5">
                 <center>
                     <h2>
-                        List Jenis Paket Laundry Lafisha
+                        {{ $title }}
                     </h2>
                 </center>
             </div>

@@ -14,8 +14,9 @@ class HelaianController extends Controller
      */
     public function index()
     {
+        $data['title'] = 'List Harga Helaian Laundry Lafisha';
         $helaian = Helaian::all();
-        return view('content.Helaian.index', compact('helaian'));
+        return view('content.Helaian.index', compact('helaian'), $data);
     }
 
     /**
@@ -25,7 +26,8 @@ class HelaianController extends Controller
      */
     public function create()
     {
-        //
+        $data['title'] = 'Tambah Harga Helaian Laundry Lafisha';
+        return view('content.Helaian.create_helaian', $data);
     }
 
     /**
@@ -34,9 +36,20 @@ class HelaianController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Helaian $helaian)
     {
-        //
+        $request->validate([
+            'nama_helaian'=> 'required',
+            'harga_helaian' => 'required'
+        ]);
+
+        $data = [
+            'nama_helaian' => $request->nama_helaian,
+            'harga_helaian' => $request->harga_helaian
+        ];
+
+        $helaian->insert($data);
+        return redirect()->route('helaian.index')->with('succes', 'Data Berhasil Ditambahkan');
     }
 
     /**

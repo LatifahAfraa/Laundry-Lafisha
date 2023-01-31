@@ -31,7 +31,7 @@
                         </li>
 
                         <li>
-                            <a href="" aria-expanded="false">
+                            <a href="{{ route('helaian.index') }}" aria-expanded="false">
                                 -&nbsp;Helaian
                             </a>
                         </li>

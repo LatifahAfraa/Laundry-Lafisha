@@ -6,12 +6,12 @@
             <div class="mb-5">
                 <center>
                     <h2>
-                        List Harga Helaian Laundry Lafisha
+                        {{ $title }}
                     </h2>
                 </center>
             </div>
             <form action="">
-                <a href="" class="btn btn-sm shadow btn-success">
+                <a href="{{ route('helaian.create') }}" class="btn btn-sm shadow btn-success">
                     <i class="flaticon-381-plus"></i>
                     Tambah Helaian</a>
                 </form>
@@ -34,9 +34,9 @@
                     @foreach ($helaian as $item)
 
                     <tr>
-                        <td>{{ $no++ }}</td>
+                        <td class="text-center">{{ $no++ }}</td>
                         <td>{{ $item->nama_helaian }}</td>
-                        <td>@Rp($item->harga_helaian)</td>
+                        <td class="text-center">@Rp($item->harga_helaian)/Pcs</td>
                         <td class="text-center">
                             <div class="col">
                                 <a href="" class="btn btn-sm shadow btn-warning">
