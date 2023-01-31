@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HelaianController;
 use App\Models\Pelanggan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -27,4 +28,5 @@ Route::middleware(['auth'])->group(function(){
 
     Route::resource('pelanggan', PelangganController::class);
     Route::resource('jenis', JenisController::class);
+    Route::resource('helaian', HelaianController::class);
 });

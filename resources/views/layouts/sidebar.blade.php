@@ -19,11 +19,25 @@
                 </li>
 
                 <li>
-                    <a href="{{ route('jenis.index') }}" class="ai-icon " aria-expanded="false">
+                    <a class="has-arrow ai-icon" href="#" aria-expanded="false">
                         <i class="flaticon-381-list"></i>
-                        <span class="nav-text">Jenis Paket</span>
+                        <span class="nav-text">Master</span>
                     </a>
+                    <ul aria-expanded="false">
+                        <li>
+                            <a href="{{ route('jenis.index') }}" aria-expanded="false">
+                                -&nbsp;Jenis Paket
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="" aria-expanded="false">
+                                -&nbsp;Helaian
+                            </a>
+                        </li>
+                    </ul>
                 </li>
+
 
 
                 <li>
