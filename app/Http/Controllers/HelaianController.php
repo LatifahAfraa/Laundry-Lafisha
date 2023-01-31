@@ -71,7 +71,8 @@ class HelaianController extends Controller
      */
     public function edit(Helaian $helaian)
     {
-        //
+        $data['title'] = 'Edit Harga Helaian Laundry Lafisha';
+        return view('content.Helaian.edit_helaian', compact('helaian'), $data);
     }
 
     /**
@@ -83,7 +84,13 @@ class HelaianController extends Controller
      */
     public function update(Request $request, Helaian $helaian)
     {
-        //
+        $data = [
+            'nama_helaian' => $request->nama_helaian,
+            'harga_helaian' => $request->harga_helaian
+        ];
+
+        $helaian->update($data);
+        return redirect()->route('helaian.index')->with('success', 'Data Berhasil Di Ganti');
     }
 
     /**

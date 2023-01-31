@@ -39,7 +39,7 @@
                         <td class="text-center">@Rp($item->harga_helaian)/Pcs</td>
                         <td class="text-center">
                             <div class="col">
-                                <a href="" class="btn btn-sm shadow btn-warning">
+                                <a href="{{ route('helaian.edit', $item->id) }}" class="btn btn-sm shadow btn-warning">
                                     <i class="flaticon-381-edit"></i>
                                     Edit</a>
                             </div>
