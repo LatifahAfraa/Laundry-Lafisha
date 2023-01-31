@@ -60,7 +60,7 @@ class PelangganController extends Controller
      */
     public function show(Pelanggan $pelanggan)
     {
-        //
+
     }
 
     /**
@@ -71,7 +71,8 @@ class PelangganController extends Controller
      */
     public function edit(Pelanggan $pelanggan)
     {
-        //
+        $data['title'] = 'Edit Pelanggan';
+        return view('content.pelanggan.edit_pelanggan', compact('pelanggan'), $data);
     }
 
     /**
@@ -83,7 +84,12 @@ class PelangganController extends Controller
      */
     public function update(Request $request, Pelanggan $pelanggan)
     {
-        //
+        $data = [
+            'nama_pelanggan' => $request->nama_pelanggan,
+            'no_pelanggan' =>$request->no_pelanggan
+        ];
+        $pelanggan->update($data);
+        return redirect()->route('pelanggan.index')->with('success', 'Data Berhasil Di Ubah');
     }
 
     /**
