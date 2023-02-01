@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JenisController;
+use App\Http\Controllers\KainMasukController;
 use App\Http\Controllers\PelangganController;
 
 /*
@@ -29,4 +30,5 @@ Route::middleware(['auth'])->group(function(){
     Route::resource('pelanggan', PelangganController::class);
     Route::resource('jenis', JenisController::class);
     Route::resource('helaian', HelaianController::class);
+    Route::resource('kain-masuk', KainMasukController::class);
 });

@@ -12,13 +12,6 @@
                 </li>
 
                 <li>
-                    <a href="{{ route('pelanggan.index') }}" class="ai-icon " aria-expanded="false">
-                        <i class="flaticon-381-user-2"></i>
-                        <span class="nav-text">Pelanggan</span>
-                    </a>
-                </li>
-
-                <li>
                     <a class="has-arrow ai-icon" href="#" aria-expanded="false">
                         <i class="flaticon-381-list"></i>
                         <span class="nav-text">Master</span>
@@ -38,6 +31,19 @@
                     </ul>
                 </li>
 
+                <li>
+                    <a href="{{ route('pelanggan.index') }}" class="ai-icon " aria-expanded="false">
+                        <i class="flaticon-381-user-2"></i>
+                        <span class="nav-text">Pelanggan</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="" class="ai-icon " aria-expanded="false">
+                        <i class="fa-solid fa-shirt"></i>
+                        <span class="nav-text">Kain Masuk</span>
+                    </a>
+                </li>
 
 
                 <li>
