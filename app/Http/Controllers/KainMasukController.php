@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Helaian;
+use App\Models\Jenis;
 use App\Models\KainMasuk;
+use App\Models\Pelanggan;
 use Illuminate\Http\Request;
 
 class KainMasukController extends Controller
@@ -14,7 +17,9 @@ class KainMasukController extends Controller
      */
     public function index(KainMasuk $kainMasuk)
     {
-
+        $pelanggan = Pelanggan::all();
+        $jenis = Jenis::all();
+        $helaian = Helaian::all();
     }
 
     /**
