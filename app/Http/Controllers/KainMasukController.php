@@ -17,9 +17,8 @@ class KainMasukController extends Controller
      */
     public function index(KainMasuk $kainMasuk)
     {
-        $pelanggan = Pelanggan::all();
-        $jenis = Jenis::all();
-        $helaian = Helaian::all();
+        $data['title'] = 'List Kain Masuk';
+        return view('content.kain-masuk.index', compact('kainMasuk'), $data);
     }
 
     /**

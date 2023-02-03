@@ -24,17 +24,17 @@ class KainMasuk extends Model
 
     public function pelanggan():BelongsTo
     {
-        return $this->belongsTo(Pelanggan::class, 'id', 'id_pelanggan');
+        return $this->belongsTo(Pelanggan::class, 'id_pelanggan', 'id');
     }
 
     public function jenis():BelongsTo
     {
-        return $this->belongsTo(Jenis::class, 'id', 'id_jenis');
+        return $this->belongsTo(Jenis::class, 'id_jenis', 'id');
     }
 
     public function helaian():BelongsTo
     {
-        return $this->belongsTo(Helaian::class, 'id', 'id_helaian');
+        return $this->belongsTo(Helaian::class, 'id_helaian', 'id');
     }
 
 }

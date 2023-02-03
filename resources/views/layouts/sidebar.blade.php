@@ -39,7 +39,7 @@
                 </li>
 
                 <li>
-                    <a href="" class="ai-icon " aria-expanded="false">
+                    <a href="{{ route('kain-masuk.index') }}" class="ai-icon " aria-expanded="false">
                         <i class="fa-solid fa-shirt"></i>
                         <span class="nav-text">Kain Masuk</span>
                     </a>
